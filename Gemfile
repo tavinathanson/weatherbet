@@ -29,10 +29,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-# We'll be using the Unicorn webserver
-gem 'unicorn'
-
-# We want to be able to use "rails server" with unicorn
+# We'll be using the Unicorn webserver, and we want to be able to use "rails server" with unicorn
 gem 'unicorn-rails'
 
 # We want this to be able to connect to REST API's easily
@@ -42,10 +39,7 @@ gem 'rest-client'
 gem 'json'
 
 # HAML, SASS, and Compass for better HTML and CSS
-gem 'haml'
-gem 'compass'
 gem 'haml-rails'
-gem 'sass-rails'
 gem 'compass-rails'
 
 group :doc do
