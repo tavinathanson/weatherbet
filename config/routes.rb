@@ -54,7 +54,5 @@ Weatherbet::Application.routes.draw do
   #     resources :products
   #   end
 
-	Weatherbet::Application.routes.draw.do
-		root 'application#index'
-	end
+	root 'application#index'
 end
