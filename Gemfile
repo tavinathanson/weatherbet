@@ -40,7 +40,7 @@ gem 'json'
 
 # HAML, SASS, and Compass for better HTML and CSS
 gem 'haml-rails'
-gem 'compass-rails'
+gem “compass-rails”, “~> 2.0.alpha.0″ # Doesn't work without this right now
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
