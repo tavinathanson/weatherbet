@@ -35,6 +35,12 @@ gem 'unicorn'
 # We want to be able to use "rails server" with unicorn
 gem 'unicorn-rails'
 
+# We want this to be able to connect to REST API's easily
+gem 'rest-client'
+
+# We want this to be able to process JSON easily
+gem 'json'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
