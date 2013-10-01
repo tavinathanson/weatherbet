@@ -41,6 +41,10 @@ gem 'rest-client'
 # We want this to be able to process JSON easily
 gem 'json'
 
+# HAML, SASS, and Compass for better HTML and CSS
+gem 'haml'
+gem 'compass'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  def index
+  def index:
 		data = RestClient.get 'http://api.openweathermap.org/data/2.1/find/name?q=nyc&units=imperial'
 		data = JSON.parse(data)	
 
