@@ -17,3 +17,6 @@
 
 # Ignore env files
 .env
+
+# Ignore SASS caching files
+.sass-cache

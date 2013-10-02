@@ -39,7 +39,8 @@ gem 'rest-client'
 gem 'json'
 
 # HAML, SASS, and Compass for better HTML and CSS
-gem 'haml-rails'
+gem 'haml'
+gem 'haml-rails', git: 'https://github.com/indirect/haml-rails' # Doesn't work in Rails 4 without this right now
 gem 'compass-rails', '~> 2.0.alpha.0' # Doesn't work without this right now
 
 group :doc do
