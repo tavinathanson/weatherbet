@@ -1,4 +1,5 @@
 Weatherbet::Application.routes.draw do
+  get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -54,5 +55,9 @@ Weatherbet::Application.routes.draw do
   #     resources :products
   #   end
 
-	root 'application#index'
+	# Allows navigate to /, which will redirect to /welcome/index
+	root 'welcome#index'
+
+	# Allows navigate to /welcome, which will redirect to /welcome/index
+	resources :welcome
 end
