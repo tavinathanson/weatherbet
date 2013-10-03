@@ -1,6 +1,6 @@
-# Regular JS
+// Regular JS
 
-# A simple function to toggle an element between showing and hiding
+// A simple function to toggle an element between showing and hiding
 function toggle(obj) {
 	var el = document.getElementById(obj);
 
