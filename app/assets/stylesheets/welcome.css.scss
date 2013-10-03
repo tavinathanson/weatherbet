@@ -24,6 +24,16 @@
 }
 
 .button {
-	@include sassy-button-structure(50px, 20px);
-	@include sassy-button-gradient("glass", #4D8CCD);
+	@include sassy-button-structure(20px, 20px);
+	font-size: 14pt;
+	padding: 15px;
 }
+
+.green {
+	@include sassy-button-gradient("glass", #4cbe5f);
+}
+
+.blue {
+	@include sassy-button-gradient("glass", #4d8ccd);
+}
+
