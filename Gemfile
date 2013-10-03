@@ -8,8 +8,11 @@ gem 'rails', '4.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-# Use SCSS for stylesheets
+# HAML, SASS, Compass, etc. for better HTML and CSS
+gem 'haml-rails', git: 'https://github.com/indirect/haml-rails' # Doesn't work in Rails 4 without this right now
 gem 'sass-rails', '~> 4.0.0'
+gem 'compass-rails', '~> 2.0.alpha.0' # Doesn't work without this right now
+gem 'sassy-buttons'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -37,11 +40,6 @@ gem 'rest-client'
 
 # We want this to be able to process JSON easily
 gem 'json'
-
-# HAML, SASS, and Compass for better HTML and CSS
-gem 'haml'
-gem 'haml-rails', git: 'https://github.com/indirect/haml-rails' # Doesn't work in Rails 4 without this right now
-gem 'compass-rails', '~> 2.0.alpha.0' # Doesn't work without this right now
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
