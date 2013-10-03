@@ -16,3 +16,14 @@
 		size: 10pt;
 	}
 }
+
+.button_container {
+	text-align: center;
+	vertical-align: middle;
+	margin-top: 20px;
+}
+
+.button {
+	@include sassy-button-structure(50px, 20px);
+	@include sassy-button-gradient("simple", #4D8CCD);
+}
