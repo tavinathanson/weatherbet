@@ -1,2 +1,6 @@
-%h1
-	= @text
+- content_for :css do
+	= stylesheet_link_tag 'welcome'
+
+%div.container
+	%h1
+		= @text
