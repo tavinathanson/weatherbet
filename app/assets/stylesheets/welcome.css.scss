@@ -25,5 +25,5 @@
 
 .button {
 	@include sassy-button-structure(50px, 20px);
-	@include sassy-button-gradient("simple", #4D8CCD);
+	@include sassy-button-gradient("glass", #4D8CCD);
 }
