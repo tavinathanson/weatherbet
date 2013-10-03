@@ -1,12 +1,12 @@
 %div.container
-	%h1
+	%h1{id: "text"}
 		= @text
-		%div.button_container
-			%button.button.blue
-				= "Client-Side Toggle"
-		%div.button_container
-			%button.button.green
-				= "AJAX Toggle"
-		%div.button_container
-			%button.button.yellow
-				= "Server-Side Toggle"
+	%div.button_container
+		%button{class: "button blue", :onclick => "toggle()"}
+			= "Client-Side Toggle"
+	%div.button_container
+		%button.button.green
+			= "AJAX Toggle"
+	%div.button_container
+		%button.button.yellow
+			= "Server-Side Toggle"
