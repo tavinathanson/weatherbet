@@ -31,6 +31,6 @@ function toggleAjax(obj) {
 		}
 	}
 
-	xmlHttp.open("GET", "http://localhost:3000/welcome/sf", true);
+	xmlHttp.open("GET", "/welcome/sf", true);
 	xmlHttp.send();
 }
