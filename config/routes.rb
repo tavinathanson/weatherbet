@@ -55,9 +55,15 @@ Weatherbet::Application.routes.draw do
   #     resources :products
   #   end
 
-	# Allows navigate to /, which will redirect to /welcome/index
+	# Allows navigation to /, which will redirect to /welcome/index
 	root 'welcome#index'
 
-	# Allows navigate to /welcome, which will redirect to /welcome/index
-	resources :welcome
+	# Allows navigation to /welcome, which will redirect to /welcome/index
+	get 'welcome' => 'welcome#index'
+
+	# Allows navigation to /welcome/nyc
+	get 'welcome/nyc' => 'welcome#nyc'
+
+	# Allows navigation to /welcome/sf
+	get 'welcome/sf' => 'welcome#sf'
 end
