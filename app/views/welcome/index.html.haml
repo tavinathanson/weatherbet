@@ -1,8 +1,15 @@
+
+- content_for :onload_contents do
+	alert(1);
+
 %div.container
-	%h1{id: "text"}
-		= @text
+	%h1
+		%div{id: "sf_text"}
+			= @sf_text
+		%div{id: "nyc_text"}
+			= @nyc_text
 	%div.button_container
-		%button{class: "button blue", :onclick => "toggle('text')"}
+		%button{class: "button blue", :onclick => "toggle_between('nyc_text', 'sf_text')"}
 			= "Client-Side Toggle"
 	%div.button_container
 		%button.button.green

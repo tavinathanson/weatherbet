@@ -30,6 +30,11 @@
 	padding: 15px;
 }
 
+#sf_text {
+}
+
+// #nyc_text: no CSS needed here
+
 .green {
 	@include sassy-button-gradient("glass", #4cae5f);
 }
