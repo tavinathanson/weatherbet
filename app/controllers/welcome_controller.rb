@@ -15,9 +15,19 @@ class WelcomeController < ApplicationController
 
 	def get_weather_text(city_name_query, city_name_print)
 		# TODO: Better error handling
-		data = RestClient.get "http://api.openweathermap.org/data/2.1/find/name?q=" + city_name_query + "&units=imperial"
-		data_parsed = JSON.parse(data)
+		
+		# FIXME: API is broken; need to use a new one
+		# data = RestClient.get "http://api.openweathermap.org/data/2.1/find/name?q=" + city_name_query + "&units=imperial"
+		# data_parsed = JSON.parse(data)
+		# return "The weather in " + city_name_print + " is seriously " + data_parsed["list"][0]["main"]["temp"].to_s + "° F"
+		return "The weather in " + city_name_print + " is seriously " + temp_get_weather_text(city_name_query) + "° F"
+	end
 
-		return "The weather in " + city_name_print + " is seriously " + data_parsed["list"][0]["main"]["temp"].to_s + "° F"
+	def temp_get_weather_text(city_name_query)
+		if city_name_query == "nyc,ny"
+			return "72.21"
+		else
+			return "56.76"
+		end
 	end
 end
