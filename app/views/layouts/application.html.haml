@@ -9,6 +9,6 @@
       = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
       = csrf_meta_tag
     = javascript_include_tag 'application'
-  %body.bp{:onload => yield :onload_contents}
+  %body.bp
     #container
       = yield
