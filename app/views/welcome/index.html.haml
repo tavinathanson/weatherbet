@@ -1,15 +1,23 @@
-%div.container
-	%h1
-		%div{class: "hide", id: "sf_text"}
-			= @sf_text
-		%div{id: "nyc_text"}
+%div.page_container
+	%div.weather_container
+		%h1
+			%div{class: "hide", id: "sf_text"}
+				= @sf_text
+			%div{id: "nyc_text"}
+				= @nyc_text
+		%div.button_container
+			%button{class: "button blue", :onclick => "toggle_between('nyc_text', 'sf_text')"}
+				= "Client-Side Toggle"
+	%div.weather_container
+		%h1
 			= @nyc_text
-	%div.button_container
-		%button{class: "button blue", :onclick => "toggle_between('nyc_text', 'sf_text')"}
-			= "Client-Side Toggle"
-	%div.button_container
-		%button.button.green
-			= "AJAX Toggle"
-	%div.button_container
-		%button.button.yellow
-			= "Server-Side Toggle"
+		%div.button_container
+			%button.button.green
+				= "AJAX Toggle"
+	%div.weather_container
+		%h1
+			= @nyc_text
+		%div.button_container
+			%button.button.yellow
+				= "Server-Side Toggle"
+
