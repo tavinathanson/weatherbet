@@ -21,16 +21,23 @@ function toggleBetween(obj1, obj2) {
 // A function to toggle the weather using AJAX
 // TODO: Better error handling (for example, XMLHttpRequest isn't supported by all browsers, etc.)
 function toggleAjax(obj) {
+	var el = document.getElementById(obj);
+
 	var xmlHttp = new XMLHttpRequest();
 	
-	xmlHttp.onreadystatechange = function() {
-		var el = document.getElementById(obj);
-		
+	xmlHttp.onreadystatechange = function() {		
 		if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
 			el.innerHTML = xmlHttp.responseText;
 		}
 	}
 
-	xmlHttp.open("GET", "/welcome/sf", true);
+	if (el.className != 'sf') {
+		xmlHttp.open("GET", "/welcome/sf", true);
+		el.className = 'sf';
+	} else {
+		xmlHttp.open("GET", "/welcome/nyc", true);
+		el.className = 'nyc';
+	}
+	
 	xmlHttp.send();
 }

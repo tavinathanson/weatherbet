@@ -10,7 +10,7 @@
 				= "Client-Side Toggle"
 	%div.weather_container
 		%h1
-			%div{id: "ajax_text"}
+			%div{class: "nyc", id: "ajax_text"}
 				= @nyc_text
 		%div.button_container
 			%button{class: "button green", :onclick => "toggleAjax('ajax_text')"}
