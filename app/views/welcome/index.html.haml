@@ -6,13 +6,13 @@
 			%div{id: "nyc_text"}
 				= @nyc_text
 		%div.button_container
-			%button{class: "button blue", :onclick => "toggle_between('nyc_text', 'sf_text')"}
+			%button{class: "button blue", :onclick => "toggleBetween('nyc_text', 'sf_text')"}
 				= "Client-Side Toggle"
 	%div.weather_container
 		%h1
 			= @nyc_text
 		%div.button_container
-			%button.button.green
+			%button{class: "button green"}
 				= "AJAX Toggle"
 	%div.weather_container
 		%h1
