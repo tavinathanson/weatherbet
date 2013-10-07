@@ -15,10 +15,10 @@ function toggle_helper(obj, force_hide) {
 	// TODO: Better error handling
 	var el = document.getElementById(obj);
 
-	if (force_hide || el.style.display != 'none') {
-		el.style.display = 'none';
+	if (force_hide || el.className != 'hide') {
+		el.className = 'hide';
 	} else {
-		el.style.display = '';
+		el.className = '';
 	}
 }
 
