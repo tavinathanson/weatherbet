@@ -19,6 +19,4 @@
 		%h1
 			= @nyc_text
 		%div.button_container
-			%button.button.yellow
-				= "Server-Side Toggle"
-
+			= button_to "Server-Side Toggle", {:controller => "welcome", :action => "sf"}, {:class => "button yellow"}
