@@ -17,7 +17,7 @@
 				= "AJAX Toggle"
 	%div.weather_container
 		%h1
-			= @nyc_text
+			= @server_text
 		%div.button_container
-			-# :controller defaults to "welcome", and :method defaults to "post"
-			= button_to "Server-Side Toggle", {:action => "sf"}, {:class => "button yellow"}
+			-# :controller defaults to "welcome"
+			= button_to "Server-Side Toggle", {:action => "toggle"}, {:method => "get", :class => "button yellow"}

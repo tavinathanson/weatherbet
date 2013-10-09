@@ -2,6 +2,13 @@ class WelcomeController < ApplicationController
   def index
 		@nyc_text = get_weather_text("nyc,ny", "New York City")
 		@sf_text = get_weather_text("sf,ca", "San Francisco")
+
+		# The server-side toggle text defaults to NYC
+		if !session["toggle"]
+			session["toggle"] = "nyc"
+		end
+
+		@server_text = get_server_text(session["toggle"])
 		render "welcome/index"
 	end
 
@@ -11,7 +18,26 @@ class WelcomeController < ApplicationController
 
 	def sf
 		render text: get_weather_text("sf,ca", "San Francisco")
+	end
+
+	def toggle
+		if session["toggle"] == "sf"
+			session["toggle"] = "nyc"
+		else
+			session["toggle"] = "sf"
+		end
+
+		@server_text = get_server_text(session["toggle"])
+		redirect_to "/"
 	end		
+
+	def get_server_text(toggle)
+		if toggle == "sf"
+			return get_weather_text("nyc,ny", "New York City")
+		else
+			return get_weather_text("sf,ca", "San Francisco")
+		end
+	end
 
 	def get_weather_text(city_name_query, city_name_print)
 		# TODO: Better error handling

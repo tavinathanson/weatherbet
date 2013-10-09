@@ -66,4 +66,7 @@ Weatherbet::Application.routes.draw do
 
 	# Allows navigation to /welcome/sf
 	get 'welcome/sf' => 'welcome#sf'
+
+	# Allows POST navigation to /welcome/toggle
+	get 'welcome/toggle' => 'welcome#toggle'
 end
