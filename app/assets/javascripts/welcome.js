@@ -1,9 +1,5 @@
 // jQuery
 
-$(function() {
-	$(".weather_container").draggable({stack: ".weather_container"});
-});
-
 // Regular JS
 
 // A function to toggle an element between showing and hiding
