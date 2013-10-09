@@ -1,3 +1,9 @@
+// jQuery
+
+$(function() {
+	$("#draggable").draggable();
+});
+
 // Regular JS
 
 // A function to toggle an element between showing and hiding

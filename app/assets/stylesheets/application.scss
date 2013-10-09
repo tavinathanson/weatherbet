@@ -9,6 +9,9 @@
 @import "compass/css3";
 @import "sassy-buttons";
 
+// Include jQuery UI
+@import "jquery.ui.all";
+
 // Example: import partial stylesheet named "_users.scss"
 // @import "users";
 @import 'welcome';
