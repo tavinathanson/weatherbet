@@ -32,7 +32,7 @@ class WelcomeController < ApplicationController
 	end		
 
 	def get_server_text(toggle)
-		if toggle == "sf"
+		if toggle == "nyc"
 			return get_weather_text("nyc,ny", "New York City")
 		else
 			return get_weather_text("sf,ca", "San Francisco")
