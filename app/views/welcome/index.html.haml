@@ -19,4 +19,5 @@
 		%h1
 			= @nyc_text
 		%div.button_container
-			= button_to "Server-Side Toggle", {:controller => "welcome", :action => "sf"}, {:class => "button yellow"}
+			-# :controller defaults to "welcome", and :method defaults to "post"
+			= button_to "Server-Side Toggle", {:action => "sf"}, {:class => "button yellow"}
