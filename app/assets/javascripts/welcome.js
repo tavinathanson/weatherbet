@@ -1,7 +1,7 @@
 // jQuery
 
 $(function() {
-	$(".weather_container").draggable();
+	$(".weather_container").draggable({stack: ".weather_container"});
 });
 
 // Regular JS
